@@ -16,7 +16,7 @@ local addr2str = function (a)
 		sa[idx] = sa[idx] * 2 + a[i]
 	end
 	sa[idx] = sa[idx] * math.pow(2, 7 - (a.n - 1) % 8)
-	return sa[1] .. "." .. sa[2] .. "." .. sa[3] .. "." .. sa[4] .. "/" .. a.n
+	return string.format("%d.%d.%d.%d/%d", sa[1], sa[2], sa[3], sa[4], a.n)
 end
 
 local tadd
